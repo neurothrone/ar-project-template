@@ -8,19 +8,50 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+  @State private var colors: [Color] = [
+    .red,
+    .blue,
+    .green
+  ]
+  
+  var body: some View {
+    CustomARViewRepresentable()
+      .ignoresSafeArea()
+      .overlay(alignment: .bottom) {
+        ScrollView(.horizontal) {
+          HStack {
+            Button {
+              ARManager.shared.actionStream.send(.removeAllAnchors)
+            } label: {
+              Image(systemName: "trash")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 44, height: 44)
+                .padding()
+                .background(.regularMaterial)
+                .cornerRadius(16)
+            }
+            
+            ForEach(colors, id: \.self) { color in
+              Button {
+                ARManager.shared.actionStream.send(.placeBlock(color: color))
+              } label: {
+                color
+                  .frame(width: 44, height: 44)
+                  .padding()
+                  .background(.regularMaterial)
+                  .cornerRadius(16)
+              }
+            }
+          }
+          .padding()
         }
-        .padding()
-    }
+      }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

@@ -11,6 +11,12 @@
 		2F91327229038A5B00C45B4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91327129038A5B00C45B4A /* ContentView.swift */; };
 		2F91327429038A5C00C45B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F91327329038A5C00C45B4A /* Assets.xcassets */; };
 		2F91327729038A5C00C45B4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F91327629038A5C00C45B4A /* Preview Assets.xcassets */; };
+		2F91327E29038AE600C45B4A /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91327D29038AE600C45B4A /* CustomARView.swift */; };
+		2F91328029038B8300C45B4A /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91327F29038B8300C45B4A /* CustomARViewRepresentable.swift */; };
+		2F9132822903B9D000C45B4A /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9132812903B9D000C45B4A /* ARAction.swift */; };
+		2F9132842903BA1B00C45B4A /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9132832903BA1B00C45B4A /* ARManager.swift */; };
+		2F9132862903C1FB00C45B4A /* ARView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9132852903C1FB00C45B4A /* ARView+Extensions.swift */; };
+		2F9132892903C37300C45B4A /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9132882903C37300C45B4A /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		2F91327129038A5B00C45B4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F91327329038A5C00C45B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F91327629038A5C00C45B4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F91327D29038AE600C45B4A /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		2F91327F29038B8300C45B4A /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		2F9132812903B9D000C45B4A /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
+		2F9132832903BA1B00C45B4A /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		2F9132852903C1FB00C45B4A /* ARView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9132892903C37300C45B4A /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,11 @@
 			children = (
 				2F91326F29038A5B00C45B4A /* AR_Project_TemplateApp.swift */,
 				2F91327129038A5B00C45B4A /* ContentView.swift */,
+				2F91327D29038AE600C45B4A /* CustomARView.swift */,
+				2F9132852903C1FB00C45B4A /* ARView+Extensions.swift */,
+				2F91327F29038B8300C45B4A /* CustomARViewRepresentable.swift */,
+				2F9132812903B9D000C45B4A /* ARAction.swift */,
+				2F9132832903BA1B00C45B4A /* ARManager.swift */,
 				2F91327329038A5C00C45B4A /* Assets.xcassets */,
 				2F91327529038A5C00C45B4A /* Preview Content */,
 			);
@@ -83,6 +100,9 @@
 			dependencies = (
 			);
 			name = "AR-Project-Template";
+			packageProductDependencies = (
+				2F9132882903C37300C45B4A /* FocusEntity */,
+			);
 			productName = "AR-Project-Template";
 			productReference = 2F91326C29038A5B00C45B4A /* AR-Project-Template.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 2F91326329038A5B00C45B4A;
+			packageReferences = (
+				2F9132872903C37300C45B4A /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 2F91326D29038A5B00C45B4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F91327229038A5B00C45B4A /* ContentView.swift in Sources */,
+				2F9132822903B9D000C45B4A /* ARAction.swift in Sources */,
+				2F91327E29038AE600C45B4A /* CustomARView.swift in Sources */,
 				2F91327029038A5B00C45B4A /* AR_Project_TemplateApp.swift in Sources */,
+				2F9132842903BA1B00C45B4A /* ARManager.swift in Sources */,
+				2F91328029038B8300C45B4A /* CustomARViewRepresentable.swift in Sources */,
+				2F9132862903C1FB00C45B4A /* ARView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +298,7 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires the use of your camera to provide AR features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +328,7 @@
 				DEVELOPMENT_TEAM = 4BP826FJGX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires the use of your camera to provide AR features";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F9132872903C37300C45B4A /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F9132882903C37300C45B4A /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F9132872903C37300C45B4A /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F91326429038A5B00C45B4A /* Project object */;
 }

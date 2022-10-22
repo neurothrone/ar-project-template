@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct AR_Project_TemplateApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
